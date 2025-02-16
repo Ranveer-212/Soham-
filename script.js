@@ -67,7 +67,7 @@ function startGame() {
 // Spawn Curse
 function spawnCurse() {
   const curse = document.createElement("img");
-  curse.src = "https://i.sstatic.net/IEJVB.jpg"; // Replace with your curse image
+  curse.src = "https://github.com/user-attachments/assets/f36bdc5e-0fb1-4da7-b097-3eb30294e5ac"; // Replace with your curse image
   curse.className = "curse";
   curse.style.left = `${Math.random() * (gameArea.offsetWidth - 80)}px`;
   curse.style.top = `${Math.random() * (gameArea.offsetHeight - 80)}px`;
