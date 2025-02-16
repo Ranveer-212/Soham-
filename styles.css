@@ -22,8 +22,8 @@ body {
 .container {
   padding: 20px;
   max-width: 100%; /* Ensure container doesn't exceed viewport width */
-  overflow-y: auto; /* Enable vertical scrolling */
   min-height: 100vh; /* Ensure container takes full viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 /* Headings */
