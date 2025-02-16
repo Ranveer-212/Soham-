@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Take a Break, Champ!</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Comic+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Take a Break, Champ!</h1>
+    <div class="meme">
+      <img src="images/meme.jpg" alt="JJK Meme" class="rotate" width="20%" height="20%" style="border-radius: 50%;">
+    </div>
+
+    <!-- Scrollable Game Area -->
+    <div class="scrollable-game-area">
+      <h1>Whack-a-Curse!</h1>
+      <div class="game-info">
+        <p>Score: <span id="score">0</span></p>
+        <p>Time Left: <span id="timer">30</span>s</p>
+      </div>
+      <div id="game-area"></div>
+      <button id="start-button">Start Game</button>
+    </div>
+
+    <a href="surprise.html" class="button">Surprise Time!</a>
+  </div>
+
+  <!-- Random Character Pop-Up -->
+  <div id="random-character" class="hidden">
+    <img src="images/nobara-funny.png" alt="Nobara">
+    <p>"If exams were curses, I’d nail them all in one go! You can too!"</p>
+  </div>
+
+  <!-- Sound Effects -->
+  <audio id="whack-sound" src="sounds/whack.mp3"></audio>
+  <audio id="bg-music" src="sounds/game-bg-music.mp3" loop></audio>
+
+  <!-- Link to JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+  font-family: 'Comic Neue', cursive;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Container */
+.container {
+  padding: 20px;
+}
+
+/* Headings */
+h1 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 3rem;
+  color: #e74c3c;
+  text-shadow: 2px 2px 0 #f1c40f;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Animated Text */
+.animated-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff6f61, #ffcc00, #6b5b95, #88b04b);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 5s ease infinite, floatText 3s ease-in-out infinite;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Button Container */
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2980b9;
+  animation: none;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Character Styles */
+.character {
+  margin: 20px 0;
+}
+
+.character img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  animation: float 3s infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Meme Image */
+.meme img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Random Character Pop-Up */
+#random-character {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  animation: slideIn 1s ease-out;
+  text-align: center;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+#random-character img {
+  width: 100px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  border-radius: 50%; /* Circular images */
+  object-fit: cover; /* Prevent distortion */
+  border: 3px solid #3498db; /* Add a border */
+}
+
+#random-character p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.hidden {
+  display: none;
+}
+
+/* Cursor Effects */
+.cursor-effect {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 223, 186, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: cursorPop 0.5s ease-out;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes cursorPop {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(0); }
+}
+
+/* Game Styles */
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Scrollable Game Area */
+.scrollable-game-area {
+  width: 100%;
+  height: 300px; /* Fixed height for the scrollable area */
+  overflow: auto; /* Add scrollbars */
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+#game-area {
+  position: relative;
+  width: 1000px; /* Larger game area */
+  height: 1000px; /* Larger game area */
+}
+
+.curse {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  animation: float 3s infinite;
+  border-radius: 50%;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Start Button */
+#start-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#start-button:hover {
+  background-color: #2980b9;
+}
